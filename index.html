@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- GOOGLE FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+  <title>Rock Paper Scissor</title>
+</head>
+<body>
+  <div class="container">
+
+    <div class="hero">
+      <div class="title">
+        <img class="logo" src="images/logo.svg" alt="logo">
+      </div>
+      <div class="score">
+        <p>score</p>
+        <h1 id="score-text">0</h1>
+      </div>
+      
+    </div>
+
+    <div id="start-game" class="choice-box ">
+      <img src="images/bg-triangle.svg" alt="triangle">
+      <div class="icons">
+        <i id="rock" class="fas fa-hand-rock rock-icon" data-choice></i>
+        <i id="paper" class="fas fa-hand-paper paper-icon" data-choice></i>
+        <i id="scissors" class="fas fa-hand-scissors scissors-icon" data-choice></i>
+      </div>
+    </div>
+
+    <div id="rules-container" class="rules hide">
+      <h2>Rules</h2>
+      <img id="close-icon" class="close" src="images/icon-close.svg" alt="">
+      <img class="rules-img" src="images/image-rules.svg" alt="">
+    </div>
+
+    <div id="show-choices" class="game hide">
+      <div id="show-user-choice" class="user-choice"></div>
+
+      <div id="show-computer-choice" class="computer-choice">
+      </div>
+    </div>
+
+
+    <div id="winner" class="result hide"> 
+      <h2 id="winner-text">YOU WIN</h2>
+      <button id="play-again-btn" class="btn btn-play">Play Again</button>
+    </div>
+
+    <button id="rules-btn" class="btn btn-rules">Rules</button>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
