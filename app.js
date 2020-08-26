@@ -30,12 +30,12 @@ playAgainButton.addEventListener("click", () => {
   result.classList.toggle("hide");
   startGame.classList.toggle("hide");
   showChoices.classList.toggle("hide");
+  showComputerChoice.classList.add("hide");
 })
 
 choice.forEach(choice => {
   choice.addEventListener("click", e => {
     const userChoice = e.target.id;
-    console.log(userChoice);
     showUserChoice.innerHTML = `
       <i id="${userChoice}" class="fas fa-hand-${userChoice} ${userChoice}-icon-game"></i>
       <p>you picked</p>`;
@@ -47,6 +47,9 @@ choice.forEach(choice => {
     <p>house picked</p>`;
     result.classList.toggle("hide");
 
+    setTimeout( function() {
+      showComputerChoice.classList.remove("hide");
+    }, 300);
     play(userChoice, computerChoice);
   })
 })

@@ -108,8 +108,10 @@ body {
 
 /* CHOOSE ELEMENT */
 .choice-box {
-  margin: 2em auto;
+  margin: 3em auto;
+  padding: 2.5em 0;
   position: relative;
+  border: 1px solid red;
 }
 
 /* GAMES ICONS */
@@ -130,7 +132,7 @@ body {
 
   position: absolute;
   top: -.5em;
-  left: -.2em;
+  left: -.75em;
 }
 
 .rock-icon-game {
@@ -161,7 +163,7 @@ body {
 
   position: absolute;
   top: -.5em;
-  right: -.2em;
+  right: -.75em;
 }
 
 .paper-icon-game {
@@ -190,7 +192,7 @@ body {
   padding: .75em;
 
   position: absolute;
-  bottom: 0;
+  bottom: .75em;
   left: 30%;
 }
 
@@ -215,8 +217,8 @@ body {
 +++++++*/
 .game {
   display: flex;
-  justify-content: space-evenly;
-  width: 100%;
+  justify-content: space-between;
+  width: 90%;
   padding: 3em 0;
 }
 
@@ -240,6 +242,13 @@ body {
 .result h2 {
   color: #f2f2f2;
   font-size: 4rem;
+}
+
+.winner {
+  background: radial-gradient(circle, hsl(237, 49%, 15%), hsl(214, 47%, 23%));
+  border-radius: 50%;
+  height: 400px;
+  width: 400px;
 }
 
 /* RULES */
@@ -285,7 +294,8 @@ body {
   }
 
   .game {
-    justify-content: space-around;
+    justify-content: space-between;
+    width: 70%;
   }
 
   .icons i, .game i {
