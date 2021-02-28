@@ -21,7 +21,7 @@ function App() {
         </Switch>
         <Switch>
           <Route path="/game" exact>
-            <Game userChoice={userChoice} score={score} setScore={score} />
+            <Game userChoice={userChoice} score={score} setScore={setScore} />
           </Route>
         </Switch>
         <Footer />
