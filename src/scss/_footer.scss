@@ -1,0 +1,41 @@
+.footer{
+  width: 100vw;
+
+  .attribution{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 1rem;
+  }
+
+  &__link{
+    text-decoration: none;
+    transition: color 300ms ease;
+
+    &:hover {
+      transition: color 300ms ease;
+      color: #fff;
+    }
+  }
+
+  button{
+    position: absolute;
+    bottom: 1rem;
+    padding: 7px 25px;
+    right: 1rem;
+    border-radius: .4rem;
+    border: 3px solid $header-outline;
+    color: lighten($header-outline,20%);
+    background: none;
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition: color 300ms ease;
+
+    &:hover{
+      transition: color 300ms ease;
+      background-color: rgba($color: #ffffff, $alpha: .8);
+      color: $dark-text;
+      cursor: pointer;
+    }
+  }
+}
