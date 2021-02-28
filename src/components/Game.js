@@ -62,27 +62,28 @@ const Game = ({ userChoice, score, setScore }) => {
           }
         ></div>
       </div>
-      <div className="game__play">
-        { playerWin === 'draw' ? <span className="text">Draw</span> :
-          playerWin === 'win' ? <span className="text">You Win</span> :
-          <span className="text">You Lose</span>
-        }
-        <Link to="/" className="play-again" onClick={() => setHouseChoice()}>
-          Play Again
-        </Link>
-      </div>
+
+      { counter === 0 ? (
+        <div className="game__play">
+          { playerWin === 'draw' ? <span className="text">Draw</span> :
+            playerWin === 'win' ? <span className="text">You Win</span> :
+            <span className="text">You Lose</span>
+          }
+          <Link to="/" className="play-again" onClick={() => setHouseChoice()}>
+            Play Again
+          </Link>
+        </div>
+      ) : '' }
 
       <div className="game__house">
         <span className="text">The House Picked</span>
         {counter === 0 ? (
           <div
-            className={
-              `icon icon--${houseChoice} ${playerWin === "lose" ?
+            className={`icon icon--${houseChoice} ${playerWin === "lose" ?
               `icon icon--${houseChoice}--winner` : ""}`
             }
-          ></div>
-        ) :
-          <div className="counter"><p>{counter}</p></div>
+          ></div> ) :
+          <div className="counter">{counter}</div>
         }
       </div>
     </div>
