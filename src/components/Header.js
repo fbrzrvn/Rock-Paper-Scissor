@@ -1,9 +1,19 @@
 import React from 'react';
 
-const Header = () => {
+const Header = ({ score }) => {
   return (
-    <div>
-      Header
+    <div className="header">
+      <div className="text">
+        <span>Rock</span>
+        <span>Paper</span>
+        <span>Scissors</span>
+      </div>
+      <div className="score-box">
+        <span>Score</span>
+        <div className="score-box__score">
+          <p>{score}</p>
+        </div>
+      </div>
     </div>
   )
 }
