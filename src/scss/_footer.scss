@@ -1,11 +1,17 @@
 .footer{
   width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 3rem;
+  padding-right: 1rem;
+
+  @media screen and (max-width: 678px) {
+    flex-direction: column-reverse;
+    margin: 5rem auto;
+  }
 
   .attribution{
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-    bottom: 1rem;
+    margin: auto;
   }
 
   &__link{
@@ -19,10 +25,8 @@
   }
 
   button{
-    position: absolute;
-    bottom: 1rem;
     padding: 7px 25px;
-    right: 1rem;
+    align-self: flex-end;
     border-radius: .4rem;
     border: 3px solid $header-outline;
     color: lighten($header-outline,20%);
@@ -30,6 +34,11 @@
     font-weight: 600;
     letter-spacing: 2px;
     transition: color 300ms ease;
+
+    @media screen and (max-width: 678px) {
+      margin-bottom: 1rem;
+      align-self: center;
+    }
 
     &:hover{
       transition: color 300ms ease;
