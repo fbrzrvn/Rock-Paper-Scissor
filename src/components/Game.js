@@ -48,7 +48,7 @@ const Game = ({ userChoice, score, setScore }) => {
     return () => {
       clearInterval(timer);
     };
-  }, [counter, houseChoice, result]);
+  }, [counter]);
 
   return (
     <div className="game">
