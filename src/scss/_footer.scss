@@ -1,48 +1,29 @@
-.footer{
+.footer {
   width: 100vw;
+  position: absolute;
+  bottom: 3rem;
   display: flex;
-  justify-content: center;
-  margin: 0 auto 3rem;
-  padding-right: 1rem;
+  justify-content: flex-end;
+  margin: 0 50px 0 0;
 
   @media screen and (max-width: 678px) {
-    flex-direction: column-reverse;
-    margin: 5rem auto;
+    justify-content: center;
+    margin: 0 auto;
   }
 
-  .attribution{
-    margin: auto;
-  }
-
-  &__link{
-    text-decoration: none;
-    transition: color 300ms ease;
-
-    &:hover {
-      transition: color 300ms ease;
-      color: #fff;
-    }
-  }
-
-  button{
+  button {
     padding: 7px 25px;
-    align-self: flex-end;
-    border-radius: .4rem;
+    border-radius: 0.4rem;
     border: 3px solid $header-outline;
-    color: lighten($header-outline,20%);
+    color: lighten($header-outline, 20%);
     background: none;
     font-weight: 600;
     letter-spacing: 2px;
     transition: color 300ms ease;
 
-    @media screen and (max-width: 678px) {
-      margin-bottom: 1rem;
-      align-self: center;
-    }
-
-    &:hover{
+    &:hover {
       transition: color 300ms ease;
-      background-color: rgba($color: #ffffff, $alpha: .8);
+      background-color: rgba($color: #fff, $alpha: 0.8);
       color: $dark-text;
       cursor: pointer;
     }

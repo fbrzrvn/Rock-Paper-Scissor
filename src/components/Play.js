@@ -2,11 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Triangle from '../images/bg-triangle.svg';
 
-const Play = ({ setUserChoice}) => {
-
+const Play = ({ setUserChoice }) => {
   const handleClick = e => {
     setUserChoice(e.target.dataset.id);
-  }
+  };
 
   return (
     <div className="play">
@@ -17,7 +16,7 @@ const Play = ({ setUserChoice}) => {
             data-id="rock"
             className="icon icon--rock"
             onClick={handleClick}
-          ></div>
+          />
         </Link>
       </div>
       <div className="items">
@@ -26,7 +25,7 @@ const Play = ({ setUserChoice}) => {
             data-id="paper"
             className="icon icon--paper"
             onClick={handleClick}
-          ></div>
+          />
         </Link>
       </div>
       <div className="items">
@@ -35,11 +34,11 @@ const Play = ({ setUserChoice}) => {
             data-id="scissors"
             className="icon icon--scissors"
             onClick={handleClick}
-          ></div>
+          />
         </Link>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Play;
